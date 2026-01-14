@@ -19,9 +19,7 @@ using NetExtensions.Extensions.Data;
 using NetExtensions.Extensions.Data;
 
 // 從配置檔建立連線（支援自動解密）
-using var connection = ConnectionFactory.CreateFromConfig(
-    configuration,
-    "DefaultConnection");
+using var connection = ConnectionFactory.CreateFromConfig(configuration, "DefaultConnection");
 
 // 使用 Dapper 擴充方法
 var users = await connection.pQueryListAsync<User>("SELECT * FROM Users");

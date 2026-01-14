@@ -11,19 +11,13 @@ using NetExtensions.Extensions.Data;
 using Microsoft.Extensions.Configuration;
 
 // 方式 1: 直接建立連線
-using var connection = ConnectionFactory.Create(
-    "Server=localhost;Database=MyDb;User Id=sa;Password=xxx;",
-    DatabaseType.SqlServer);
+using var connection = ConnectionFactory.Create("Server=localhost;Database=MyDb;User Id=sa;Password=xxx;", DatabaseType.SqlServer);
 
 // 方式 2: 從配置檔建立
-using var connection = ConnectionFactory.CreateFromConfig(
-    configuration,
-    "DefaultConnection");
+using var connection = ConnectionFactory.CreateFromConfig(configuration, "DefaultConnection");
 
 // 方式 3: 建立並開啟連線
-using var connection = ConnectionFactory.CreateAndOpen(
-    connectionString,
-    DatabaseType.SqlServer);
+using var connection = ConnectionFactory.CreateAndOpen(connectionString, DatabaseType.SqlServer);
 ```
 
 ---
@@ -80,9 +74,7 @@ export DB_ENCRYPTION_KEY="your-secret-key"
 
 ```csharp
 // ConnectionFactory 會自動偵測並解密
-using var connection = ConnectionFactory.CreateFromConfig(
-    configuration,
-    "DefaultConnection");
+using var connection = ConnectionFactory.CreateFromConfig(configuration, "DefaultConnection");
 
 // 完全透明，不需要手動解密
 var users = await connection.pQueryListAsync<User>("SELECT * FROM Users");
@@ -165,20 +157,14 @@ public class UserService
 
     public async Task<User> GetUser(int id)
     {
-        using var connection = ConnectionFactory.CreateFromConfig(
-            _configuration,
-            "DefaultConnection");
+        using var connection = ConnectionFactory.CreateFromConfig(_configuration, "DefaultConnection");
 
-        return await connection.pQueryFirstOrDefaultAsync<User>(
-            "SELECT * FROM Users WHERE Id = @Id",
-            new { Id = id });
+        return await connection.pQueryFirstOrDefaultAsync<User>("SELECT * FROM Users WHERE Id = @Id", new { Id = id });
     }
 
     public async Task<int> CreateUser(User user)
     {
-        using var connection = ConnectionFactory.CreateFromConfig(
-            _configuration,
-            "DefaultConnection");
+        using var connection = ConnectionFactory.CreateFromConfig(_configuration, "DefaultConnection");
 
         return await connection.pInsertWithIdAsync<int>("Users", user);
     }
@@ -190,9 +176,7 @@ public class UserService
 ```csharp
 public async Task TransferMoney(int fromId, int toId, decimal amount)
 {
-    using var connection = ConnectionFactory.CreateAndOpenFromConfig(
-        _configuration,
-        "DefaultConnection");
+    using var connection = ConnectionFactory.CreateAndOpenFromConfig(_configuration, "DefaultConnection");
 
     await connection.pExecuteInTransactionAsync(async (conn, trans) =>
     {
@@ -215,17 +199,12 @@ public async Task TransferMoney(int fromId, int toId, decimal amount)
 public async Task SyncData()
 {
     // 從 SQL Server 讀取
-    using var sqlConnection = ConnectionFactory.CreateFromConfig(
-        _configuration,
-        "SqlServerConnection");
+    using var sqlConnection = ConnectionFactory.CreateFromConfig(_configuration, "SqlServerConnection");
 
-    var users = await sqlConnection.pQueryListAsync<User>(
-        "SELECT * FROM Users");
+    var users = await sqlConnection.pQueryListAsync<User>("SELECT * FROM Users");
 
     // 寫入 MySQL
-    using var mysqlConnection = ConnectionFactory.CreateFromConfig(
-        _configuration,
-        "MySqlConnection");
+    using var mysqlConnection = ConnectionFactory.CreateFromConfig(_configuration, "MySqlConnection");
 
     await mysqlConnection.pBulkInsertAsync("Users", users);
 }
