@@ -13,6 +13,20 @@ using NetExtensions.Extensions.Data;
 
 ## 🚀 快速開始
 
+### ConnectionFactory（連線管理）
+
+```csharp
+using NetExtensions.Extensions.Data;
+
+// 從配置檔建立連線（支援自動解密）
+using var connection = ConnectionFactory.CreateFromConfig(
+    configuration,
+    "DefaultConnection");
+
+// 使用 Dapper 擴充方法
+var users = await connection.pQueryListAsync<User>("SELECT * FROM Users");
+```
+
 ### Dapper 資料庫操作
 
 ```csharp
@@ -59,6 +73,9 @@ path.pDirectoryEnsureExists();  // 確保資料夾存在，不存在則建立
 ```
 
 ## 📚 詳細文件
+
+### ConnectionFactory
+- [ConnectionFactory 使用文件](docs/ConnectionFactory.md) - 連線管理與加密功能
 
 ### Dapper 擴充方法
 - [Dapper 快速入門](docs/DapperQuickStart.md) - Dapper 基本概念與使用說明
