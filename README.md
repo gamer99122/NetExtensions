@@ -77,39 +77,41 @@ path.pDirectoryEnsureExists();  // 確保資料夾存在，不存在則建立
 
 ## 📋 方法總覽
 
+> **使用頻率標籤**：🔥 常用 | ⚡ 中頻 | 🔹 少用
+
 ### Dapper 查詢擴充 (7 個方法)
-- `pQueryFirstOrDefaultAsync<T>` - 查詢第一筆或 null
-- `pQuerySingleAsync<T>` - 查詢單一筆（嚴格模式）
-- `pQuerySingleOrDefaultAsync<T>` - 查詢單一筆或 null
-- `pQueryListAsync<T>` - 查詢多筆資料
-- `pQueryPagedAsync<T>` - 分頁查詢
-- `pQueryMultipleAsync` - 多結果集查詢
-- `pQueryStoredProcedureAsync<T>` - 執行預存程序查詢
+- 🔥 `pQueryFirstOrDefaultAsync<T>` - 查詢第一筆或 null
+- 🔹 `pQuerySingleAsync<T>` - 查詢單一筆（嚴格模式）
+- 🔥 `pQuerySingleOrDefaultAsync<T>` - 查詢單一筆或 null
+- 🔥 `pQueryListAsync<T>` - 查詢多筆資料
+- 🔥 `pQueryPagedAsync<T>` - 分頁查詢
+- ⚡ `pQueryMultipleAsync` - 多結果集查詢
+- 🔹 `pQueryStoredProcedureAsync<T>` - 執行預存程序查詢
 
 ### Dapper 執行擴充 (8 個方法)
-- `pExecuteAsync` - 執行 SQL 命令
-- `pExecuteScalarAsync<T>` - 執行並回傳單一值
-- `pExecuteStoredProcedureAsync` - 執行預存程序
-- `pInsertAsync` - 新增單筆資料
-- `pInsertWithIdAsync<TKey>` - 新增並回傳 Id
-- `pUpdateAsync` - 更新單筆資料
-- `pDeleteAsync<TKey>` - 刪除單筆資料
-- `pDeleteWhereAsync` - 條件刪除
+- 🔥 `pExecuteAsync` - 執行 SQL 命令
+- 🔥 `pExecuteScalarAsync<T>` - 執行並回傳單一值
+- 🔹 `pExecuteStoredProcedureAsync` - 執行預存程序
+- ⚡ `pInsertAsync` - 新增單筆資料
+- 🔥 `pInsertWithIdAsync<TKey>` - 新增並回傳 Id
+- ⚡ `pUpdateAsync` - 更新單筆資料
+- ⚡ `pDeleteAsync<TKey>` - 刪除單筆資料
+- 🔹 `pDeleteWhereAsync` - 條件刪除
 
 ### Dapper 交易擴充 (5 個方法)
-- `pExecuteInTransactionAsync<T>` - 在交易中執行（有回傳值）
-- `pExecuteInTransactionAsync` - 在交易中執行（無回傳值）
-- `pBeginTransactionSafe` - 安全開始交易
-- `pCommitSafe` - 安全提交交易
-- `pExecuteMultipleInTransactionAsync` - 執行多個 SQL 命令
+- 🔥 `pExecuteInTransactionAsync<T>` - 在交易中執行（有回傳值）
+- 🔥 `pExecuteInTransactionAsync` - 在交易中執行（無回傳值）
+- 🔹 `pBeginTransactionSafe` - 安全開始交易
+- 🔹 `pCommitSafe` - 安全提交交易
+- 🔹 `pExecuteMultipleInTransactionAsync` - 執行多個 SQL 命令
 
 ### Dapper 批次操作擴充 (6 個方法)
-- `pBulkInsertAsync<T>` - 批次新增
-- `pBulkUpdateAsync<T>` - 批次更新
-- `pBulkDeleteAsync<TKey>` - 批次刪除
-- `pBulkExecuteAsync` - 批次執行
-- `pBulkInsertInBatchesAsync<T>` - 分批新增
-- `pBulkUpdateInBatchesAsync<T>` - 分批更新
+- ⚡ `pBulkInsertAsync<T>` - 批次新增
+- 🔹 `pBulkUpdateAsync<T>` - 批次更新
+- ⚡ `pBulkDeleteAsync<TKey>` - 批次刪除
+- 🔹 `pBulkExecuteAsync` - 批次執行
+- 🔹 `pBulkInsertInBatchesAsync<T>` - 分批新增
+- 🔹 `pBulkUpdateInBatchesAsync<T>` - 分批更新
 
 ## 🔧 技術規格
 

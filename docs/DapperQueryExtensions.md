@@ -4,13 +4,15 @@
 
 ## 方法列表
 
-- [pQueryFirstOrDefaultAsync](#pqueryfirstordefaultasync) - 查詢第一筆或 null
-- [pQuerySingleAsync](#pquerysingleasync) - 查詢單一筆（嚴格模式）
-- [pQuerySingleOrDefaultAsync](#pquerysingleordefaultasync) - 查詢單一筆或 null
-- [pQueryListAsync](#pquerylistasync) - 查詢多筆資料
-- [pQueryPagedAsync](#pquerypagedasync) - 分頁查詢
-- [pQueryMultipleAsync](#pquerymultipleasync) - 多結果集查詢
-- [pQueryStoredProcedureAsync](#pquerystoredprocedureasync) - 執行預存程序查詢
+> **使用頻率**：🔥 常用 | ⚡ 中頻 | 🔹 少用
+
+- 🔥 [pQueryFirstOrDefaultAsync](#pqueryfirstordefaultasync) - 查詢第一筆或 null
+- 🔹 [pQuerySingleAsync](#pquerysingleasync) - 查詢單一筆（嚴格模式）
+- 🔥 [pQuerySingleOrDefaultAsync](#pquerysingleordefaultasync) - 查詢單一筆或 null
+- 🔥 [pQueryListAsync](#pquerylistasync) - 查詢多筆資料
+- 🔥 [pQueryPagedAsync](#pquerypagedasync) - 分頁查詢
+- ⚡ [pQueryMultipleAsync](#pquerymultipleasync) - 多結果集查詢
+- 🔹 [pQueryStoredProcedureAsync](#pquerystoredprocedureasync) - 執行預存程序查詢
 
 ---
 

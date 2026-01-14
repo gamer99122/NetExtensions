@@ -4,14 +4,16 @@
 
 ## 方法列表
 
-- [pExecuteAsync](#pexecuteasync) - 執行 SQL 命令
-- [pExecuteScalarAsync](#pexecutescalarasync) - 執行並回傳單一值
-- [pExecuteStoredProcedureAsync](#pexecutestoredprocedureasync) - 執行預存程序
-- [pInsertAsync](#pinsertasync) - 新增單筆資料
-- [pInsertWithIdAsync](#pinsertwitidasync) - 新增並回傳 Id
-- [pUpdateAsync](#pupdateasync) - 更新單筆資料
-- [pDeleteAsync](#pdeleteasync) - 刪除單筆資料
-- [pDeleteWhereAsync](#pdeletewhereasync) - 條件刪除
+> **使用頻率**：🔥 常用 | ⚡ 中頻 | 🔹 少用
+
+- 🔥 [pExecuteAsync](#pexecuteasync) - 執行 SQL 命令
+- 🔥 [pExecuteScalarAsync](#pexecutescalarasync) - 執行並回傳單一值
+- 🔹 [pExecuteStoredProcedureAsync](#pexecutestoredprocedureasync) - 執行預存程序
+- ⚡ [pInsertAsync](#pinsertasync) - 新增單筆資料
+- 🔥 [pInsertWithIdAsync](#pinsertwitidasync) - 新增並回傳 Id
+- ⚡ [pUpdateAsync](#pupdateasync) - 更新單筆資料
+- ⚡ [pDeleteAsync](#pdeleteasync) - 刪除單筆資料
+- 🔹 [pDeleteWhereAsync](#pdeletewhereasync) - 條件刪除
 
 ---
 

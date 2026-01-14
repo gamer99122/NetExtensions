@@ -27,12 +27,14 @@ await connection.pBulkInsertAsync("Users", users);
 
 ## 方法列表
 
-- [pBulkInsertAsync](#pbulkinsertasync) - 批次新增
-- [pBulkUpdateAsync](#pbulkupdateasync) - 批次更新
-- [pBulkDeleteAsync](#pbulkdeleteasync) - 批次刪除
-- [pBulkExecuteAsync](#pbulkexecuteasync) - 批次執行
-- [pBulkInsertInBatchesAsync](#pbulkinsertinbatchesasync) - 分批新增
-- [pBulkUpdateInBatchesAsync](#pbulkupdateinbatchesasync) - 分批更新
+> **使用頻率**：🔥 常用 | ⚡ 中頻 | 🔹 少用
+
+- ⚡ [pBulkInsertAsync](#pbulkinsertasync) - 批次新增
+- 🔹 [pBulkUpdateAsync](#pbulkupdateasync) - 批次更新
+- ⚡ [pBulkDeleteAsync](#pbulkdeleteasync) - 批次刪除
+- 🔹 [pBulkExecuteAsync](#pbulkexecuteasync) - 批次執行
+- 🔹 [pBulkInsertInBatchesAsync](#pbulkinsertinbatchesasync) - 分批新增
+- 🔹 [pBulkUpdateInBatchesAsync](#pbulkupdateinbatchesasync) - 分批更新
 
 ---
 

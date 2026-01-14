@@ -21,11 +21,13 @@
 
 ## 方法列表
 
-- [pExecuteInTransactionAsync (有回傳值)](#pexecuteintransactionasync-有回傳值) - 在交易中執行操作並回傳結果
-- [pExecuteInTransactionAsync (無回傳值)](#pexecuteintransactionasync-無回傳值) - 在交易中執行操作
-- [pBeginTransactionSafe](#pbegintransactionsafe) - 安全地開始交易
-- [pCommitSafe](#pcommitsafe) - 安全地提交交易
-- [pExecuteMultipleInTransactionAsync](#pexecutemultipleintransactionasync) - 執行多個 SQL 命令
+> **使用頻率**：🔥 常用 | ⚡ 中頻 | 🔹 少用
+
+- 🔥 [pExecuteInTransactionAsync (有回傳值)](#pexecuteintransactionasync-有回傳值) - 在交易中執行操作並回傳結果
+- 🔥 [pExecuteInTransactionAsync (無回傳值)](#pexecuteintransactionasync-無回傳值) - 在交易中執行操作
+- 🔹 [pBeginTransactionSafe](#pbegintransactionsafe) - 安全地開始交易
+- 🔹 [pCommitSafe](#pcommitsafe) - 安全地提交交易
+- 🔹 [pExecuteMultipleInTransactionAsync](#pexecutemultipleintransactionasync) - 執行多個 SQL 命令
 
 ---
 
